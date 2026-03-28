@@ -1,0 +1,16 @@
+/*ESTILO PARA O CORPO DO TEXTO*/
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+/*ESTILO PARA O TITULO*/
+.titulo {
+    color: #333;
+    text-align: center;
+}
+/*ESTILO PARA O PARAGRAFO INTRODUTORIO*/
+#paragrafo-intro {
+    font-size: 16px;
+    color: #555;
+}
