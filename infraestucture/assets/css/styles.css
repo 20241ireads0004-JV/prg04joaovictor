@@ -1,16 +1,272 @@
-/*ESTILO PARA O CORPO DO TEXTO*/
+/* ================================
+   RESET E BOX MODEL
+================================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================================
+   CORPO
+================================ */
 body {
     background-color: #f4f4f4;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
+    width: 100%;
+    min-height: 100vh;
 }
-/*ESTILO PARA O TITULO*/
+
+/* ================================
+   HEADER
+================================ */
+header {
+    width: 100%;
+    background-color: #fff;
+}
+
+/* ================================
+   MENU HAMBURGUER
+================================ */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 56px;
+    border-bottom: 1px solid #e2e8f0;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a2e;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #333;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+    transform-origin: center;
+}
+
+.dropdown {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+    width: 100%;
+}
+
+.dropdown ul {
+    list-style: none;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.dropdown ul li a {
+    display: block;
+    padding: 0.85rem 5%;
+    text-decoration: none;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.dropdown ul li a:hover,
+.dropdown ul li a.active {
+    border-left-color: #4f46e5;
+    color: #4f46e5;
+    background: #f8f7ff;
+}
+
+/* ================================
+   MAIN
+================================ */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2% auto;
+    display: flex;
+    gap: 3%;
+}
+
+/* ================================
+   SECTION
+================================ */
+section {
+    width: 70%;
+}
+
+article {
+    width: 100%;
+    background-color: #fff;
+    padding: 3%;
+    border-radius: 8px;
+    margin-bottom: 2%;
+}
+
+section aside {
+    width: 100%;
+    background-color: #fff;
+    padding: 3%;
+    border-radius: 8px;
+    margin-top: 2%;
+}
+
+/* ================================
+   SIDEBAR (aside do main)
+================================ */
+main > aside {
+    width: 27%;
+    background-color: #fff;
+    padding: 3%;
+    border-radius: 8px;
+    align-self: flex-start;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+    width: 100%;
+    background-color: #1a1a2e;
+    color: #fff;
+    text-align: center;
+    padding: 2% 5%;
+    margin-top: 3%;
+}
+
+/* ================================
+   TITULO E PARAGRAFO
+================================ */
 .titulo {
     color: #333;
     text-align: center;
+    font-size: clamp(18px, 3vw, 28px);
+    margin-bottom: 2%;
 }
-/*ESTILO PARA O PARAGRAFO INTRODUTORIO*/
+
 #paragrafo-intro {
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 16px);
     color: #555;
+    line-height: 1.7;
+}
+
+/* ================================
+   RESPONSIVO — TABLET (768px)
+================================ */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    main > aside {
+        width: 100%;
+    }
+}
+
+/* ================================
+   RESPONSIVO — MOBILE (480px)
+================================ */
+@media (max-width: 480px) {
+    main {
+        width: 100%;
+        padding: 0 3%;
+    }
+
+    article,
+    section aside,
+    main > aside {
+        padding: 5%;
+    }
+
+    footer {
+        padding: 5%;
+    }
+}
+/* ================================
+   HEADER DA ATIVIDADE 3
+================================ */
+header {
+    width: 100%;
+    background-color: #1a1a2e;
+    padding: 3% 5%;
+}
+
+header .titulo {
+    color: #fff;
+    text-align: center;
+    font-size: clamp(16px, 3vw, 28px);
+    margin: 0;
+}
+
+/* ================================
+   ARTICLE — LISTA
+================================ */
+article {
+    width: 100%;
+    background-color: #fff;
+    padding: 3%;
+    border-radius: 8px;
+    margin-bottom: 2%;
+}
+
+article h2 {
+    font-size: clamp(14px, 2.5vw, 22px);
+    color: #1a1a2e;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+article ol {
+    padding-left: 5%;
+}
+
+article ol li {
+    font-size: clamp(13px, 2vw, 16px);
+    color: #333;
+    padding: 0.4rem 0;
+    line-height: 1.6;
+}
+
+/* ================================
+   IMAGEM RESPONSIVA
+================================ */
+section aside {
+    width: 100%;
+    background-color: #fff;
+    padding: 3%;
+    border-radius: 8px;
+    margin-top: 2%;
+    text-align: center;
+}
+
+section aside picture img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
 }
