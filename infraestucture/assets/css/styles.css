@@ -1,272 +1,307 @@
-/* ================================
-   RESET E BOX MODEL
-================================ */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 /* ================================
-   CORPO
+   BODY GLOBAL
 ================================ */
 body {
-    background-color: #f4f4f4;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-    width: 100%;
-    min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', Arial, sans-serif;
+  min-height: 100vh;
 }
 
 /* ================================
    HEADER
 ================================ */
 header {
-    width: 100%;
-    background-color: #fff;
-}
-
-/* ================================
-   MENU HAMBURGUER
-================================ */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-    height: 56px;
-    border-bottom: 1px solid #e2e8f0;
-    width: 100%;
-}
-
-.navbar-brand {
-    font-size: 15px;
-    font-weight: 500;
-    color: #1a1a2e;
-}
-
-.hamburger {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 6px;
-    border-radius: 6px;
-}
-
-.hamburger span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: #333;
-    border-radius: 2px;
-    transition: transform 0.3s, opacity 0.3s;
-    transform-origin: center;
-}
-
-.dropdown {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.35s ease;
-    width: 100%;
-}
-
-.dropdown ul {
-    list-style: none;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.dropdown ul li a {
-    display: block;
-    padding: 0.85rem 5%;
-    text-decoration: none;
-    color: #64748b;
-    font-size: 14px;
-    font-weight: 500;
-    border-left: 3px solid transparent;
-    transition: border-color 0.2s, color 0.2s, background 0.2s;
-}
-
-.dropdown ul li a:hover,
-.dropdown ul li a.active {
-    border-left-color: #4f46e5;
-    color: #4f46e5;
-    background: #f8f7ff;
-}
-
-/* ================================
-   MAIN
-================================ */
-main {
-    width: 90%;
-    max-width: 1200px;
-    margin: 2% auto;
-    display: flex;
-    gap: 3%;
-}
-
-/* ================================
-   SECTION
-================================ */
-section {
-    width: 70%;
-}
-
-article {
-    width: 100%;
-    background-color: #fff;
-    padding: 3%;
-    border-radius: 8px;
-    margin-bottom: 2%;
-}
-
-section aside {
-    width: 100%;
-    background-color: #fff;
-    padding: 3%;
-    border-radius: 8px;
-    margin-top: 2%;
-}
-
-/* ================================
-   SIDEBAR (aside do main)
-================================ */
-main > aside {
-    width: 27%;
-    background-color: #fff;
-    padding: 3%;
-    border-radius: 8px;
-    align-self: flex-start;
-}
-
-/* ================================
-   FOOTER
-================================ */
-footer {
-    width: 100%;
-    background-color: #1a1a2e;
-    color: #fff;
-    text-align: center;
-    padding: 2% 5%;
-    margin-top: 3%;
-}
-
-/* ================================
-   TITULO E PARAGRAFO
-================================ */
-.titulo {
-    color: #333;
-    text-align: center;
-    font-size: clamp(18px, 3vw, 28px);
-    margin-bottom: 2%;
-}
-
-#paragrafo-intro {
-    font-size: clamp(14px, 2vw, 16px);
-    color: #555;
-    line-height: 1.7;
-}
-
-/* ================================
-   RESPONSIVO — TABLET (768px)
-================================ */
-@media (max-width: 768px) {
-    main {
-        width: 95%;
-        flex-direction: column;
-    }
-
-    section {
-        width: 100%;
-    }
-
-    main > aside {
-        width: 100%;
-    }
-}
-
-/* ================================
-   RESPONSIVO — MOBILE (480px)
-================================ */
-@media (max-width: 480px) {
-    main {
-        width: 100%;
-        padding: 0 3%;
-    }
-
-    article,
-    section aside,
-    main > aside {
-        padding: 5%;
-    }
-
-    footer {
-        padding: 5%;
-    }
-}
-/* ================================
-   HEADER DA ATIVIDADE 3
-================================ */
-header {
-    width: 100%;
-    background-color: #1a1a2e;
-    padding: 3% 5%;
+  width: 100%;
+  background: var(--primary);
+  padding: 1.5rem;
 }
 
 header .titulo {
-    color: #fff;
-    text-align: center;
-    font-size: clamp(16px, 3vw, 28px);
-    margin: 0;
+  color: #fff;
+  text-align: center;
+}
+
+/* MENU */
+#menu {
+  background: var(--azul);
+  position: relative;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--azul);
+  color: white;
+}
+
+/* ESQUERDA */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+/* NOME */
+.navbar-brand {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* LOGIN */
+.nav-left .btn-primary {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* DIREITA */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* HAMBURGUER */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+/* DROPDOWN ESCONDIDO */
+.dropdown {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: var(--azul);
+  border-radius: 8px;
+  width: 220px;
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ATIVO */
+.dropdown.active {
+  display: flex;
+}
+
+/* LINKS */
+.dropdown ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dropdown a {
+  color: white;
+  text-decoration: none;
+}
+
+/* AGRUPA NOME + LOGIN */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+/* ================================
+   MAIN LAYOUT (SEMÂNTICO)
+================================ */
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  gap: 2rem;
+}
+
+/* CONTEÚDO */
+main section {
+  flex: 3;
+}
+
+/* SIDEBAR */
+main > aside {
+  flex: 1;
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 10px;
+  height: fit-content;
 }
 
 /* ================================
-   ARTICLE — LISTA
+   CARDS / ARTICLES
 ================================ */
 article {
-    width: 100%;
-    background-color: #fff;
-    padding: 3%;
-    border-radius: 8px;
-    margin-bottom: 2%;
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
 }
 
-article h2 {
-    font-size: clamp(14px, 2.5vw, 22px);
-    color: #1a1a2e;
+section aside {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+:root {
+    --azul: #1E3A8A;
+    --laranja: #F97316;
+    --verde: #22C55E;
+    --vermelho: #EF4444;
+    --branco: #F9FAFB;
+    --cinza: #111827;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--branco);
+    color: var(--cinza);
+}
+
+/* CONTAINER */
+.container {
+    padding: 2rem;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+.form-group {
     margin-bottom: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* BOTÕES */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--laranja);
+    color: white;
+}
+
+.btn-warning {
+    background: var(--verde);
+    color: white;
+}
+
+.btn-danger {
+    background: var(--vermelho);
+    color: white;
+}
+
+/* ERRO */
+.erro {
+    color: var(--vermelho);
+    margin-top: 10px;
+}
+
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 12px;
     text-align: left;
 }
 
-article ol {
-    padding-left: 5%;
+thead {
+    background: var(--azul);
+    color: white;
 }
 
-article ol li {
-    font-size: clamp(13px, 2vw, 16px);
-    color: #333;
-    padding: 0.4rem 0;
-    line-height: 1.6;
+tbody tr:nth-child(even) {
+    background: #f2f2f2;
 }
 
-/* ================================
-   IMAGEM RESPONSIVA
-================================ */
-section aside {
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: row;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .dropdown {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: var(--azul);
     width: 100%;
-    background-color: #fff;
-    padding: 3%;
-    border-radius: 8px;
-    margin-top: 2%;
-    text-align: center;
-}
+  }
 
-section aside picture img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px;
+  .dropdown.active {
+    display: flex;
+  }
+
+  .dropdown ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #menu .btn-primary {
+    position: static;
+    margin-top: 10px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .nav-left {
+    gap: 0.5rem;
+  }
+
+  .nav-left .btn-primary {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
 }
