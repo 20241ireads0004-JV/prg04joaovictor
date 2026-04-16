@@ -20,7 +20,7 @@
 }
 
 /* ================================
-   BODY GLOBAL — BASE MOBILE
+   BODY GLOBAL
 ================================ */
 body {
   font-family: 'DM Sans', Arial, sans-serif;
@@ -30,209 +30,16 @@ body {
 }
 
 /* ================================
-   HEADER — BASE MOBILE
-================================ */
-header {
-  width: 100%;
-  background: var(--azul);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-header .titulo {
-  color: #fff;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-/* ================================
-   MENU / NAVBAR — BASE MOBILE
-================================ */
-#menu {
-  background: var(--azul);
-  position: relative;
-}
-
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background: var(--azul);
-  color: white;
-}
-
-/* ESQUERDA */
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-width: 0;
-}
-
-/* NOME */
-.navbar-brand {
-  font-weight: bold;
-  white-space: nowrap;
-  font-size: 1rem;
-}
-
-/* LOGIN */
-.nav-left .btn-primary {
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  white-space: nowrap;
-}
-
-/* DIREITA */
-.nav-right {
-  display: flex;
-  align-items: center;
-}
-
-/* HAMBURGUER — visível por padrão no mobile */
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-}
-
-/* DROPDOWN — base mobile */
-.dropdown {
-  position: absolute;
-  top: 70px;
-  right: 0;
-  background: var(--azul);
-  border-radius: 8px;
-  width: 100%;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown.active {
-  display: flex;
-}
-
-.dropdown ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.dropdown a {
-  color: white;
-  text-decoration: none;
-}
-
-#menu .btn-primary {
-  position: static;
-  margin-top: 10px;
-}
-
-/* ================================
-   MAIN LAYOUT — BASE MOBILE
-================================ */
-main {
-  width: 95%;
-  max-width: 1200px;
-  margin: 1.5rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* CONTEÚDO */
-main section {
-  flex: 3;
-}
-
-/* SIDEBAR */
-main > aside {
-  flex: 1;
-  background: #f1f5f9;
-  padding: 1rem;
-  border-radius: 10px;
-  height: fit-content;
-}
-
-/* ================================
-   CARDS / ARTICLES — BASE MOBILE
-================================ */
-article {
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-section aside {
-  background: #f1f5f9;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-/* Container do picture */
-picture {
-  display: flex;
-  justify-content: center; /* centraliza horizontal */
-  align-items: center;     /* centraliza vertical */
-  width: 100%;
-}
-
-/* Imagem responsiva dentro do flex */
-picture img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  flex-shrink: 0; /* evita a imagem “esmagar” */
-}
-
-/* ================================
-   CONTAINER — BASE MOBILE
-================================ */
-.container {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* ================================
-   CARD — BASE MOBILE
+   CARDS BOOTSTRAP - CUSTOMIZAÇÃO
 ================================ */
 .card {
-  background: white;
-  padding: 1.2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* ================================
@@ -272,21 +79,6 @@ button {
   align-items: center;
 }
 
-.btn-primary {
-  background: var(--laranja);
-  color: white;
-}
-
-.btn-warning {
-  background: var(--verde);
-  color: white;
-}
-
-.btn-danger {
-  background: var(--vermelho);
-  color: white;
-}
-
 /* ================================
    ERRO — BASE MOBILE
 ================================ */
@@ -320,157 +112,41 @@ tbody tr:nth-child(even) {
   background: #f2f2f2;
 }
 
+/* ================================
+   NAVBAR CUSTOMIZAÇÃO
+================================ */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-/* ================================================
-   MEDIA QUERY — TABLET (601px a 1024px)
-================================================ */
-@media (min-width: 601px) and (max-width: 1024px) {
+/* ================================
+   FOOTER
+================================ */
+footer {
+  margin-top: auto;
+}
 
-  header {
-    padding: 1.2rem;
-  }
-
-  header .titulo {
-    font-size: 1.4rem;
-  }
-
-  .navbar-brand {
-    font-size: 1.1rem;
-  }
-
-  .nav-left {
-    gap: 0.8rem;
-  }
-
-  .nav-left .btn-primary {
-    padding: 6px 12px;
-    font-size: 0.85rem;
-  }
-
-  .dropdown {
-    width: 220px;
-    right: 20px;
-    align-items: flex-start;
-  }
-
-  main {
-    width: 92%;
-    margin: 2rem auto;
-    gap: 1.8rem;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-
-  article {
-    padding: 1.3rem;
-  }
-
-  .container {
-    padding: 1.5rem;
-  }
-
-  .card {
-    padding: 1.5rem;
+/* ================================
+   RESPONSIVIDADE
+================================ */
+@media (max-width: 768px) {
+  th, td {
+    padding: 8px 5px;
+    font-size: 0.8rem;
   }
 
   table {
-    font-size: 0.9rem;
-  }
-
-  th, td {
-    padding: 11px 10px;
+    font-size: 0.75rem;
   }
 }
 
-
-/* ================================================
-   MEDIA QUERY — DESKTOP (a partir de 1025px)
-================================================ */
-@media (min-width: 1025px) {
-
-  header {
-    padding: 1.5rem;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  header .titulo {
-    font-size: 1.6rem;
-  }
-
-  /* Hamburguer oculto no desktop */
-  .hamburger {
-    display: none;
-  }
-
-  /* Dropdown vira nav horizontal no desktop */
-  .dropdown {
-    position: static;
-    display: flex !important;
-    flex-direction: row;
-    background: transparent;
-    box-shadow: none;
-    width: auto;
-    padding: 0;
-    border-radius: 0;
-  }
-
-  .dropdown ul {
-    flex-direction: row;
-    gap: 1.5rem;
-  }
-
-  .navbar {
-    padding: 1rem 2rem;
-  }
-
-  .navbar-brand {
-    font-size: 1.2rem;
-  }
-
-  .nav-left {
-    gap: 1rem;
-  }
-
-  .nav-left .btn-primary {
-    padding: 6px 12px;
-    font-size: 0.9rem;
-  }
-
-  /* Layout em linha: conteúdo + sidebar lado a lado */
-  main {
-    width: 90%;
-    margin: 2rem auto;
-    flex-direction: row;
-    gap: 2rem;
-  }
-
-  main section {
-    flex: 3;
-  }
-
-  main > aside {
-    flex: 1;
-    padding: 1.5rem;
-  }
-
-  article {
-    padding: 1.5rem;
-  }
-
-  .container {
-    padding: 2rem;
-  }
-
-  .card {
-    padding: 2rem;
+@media (min-width: 769px) {
+  th, td {
+    padding: 12px;
+    font-size: 0.95rem;
   }
 
   table {
     font-size: 1rem;
-  }
-
-  th, td {
-    padding: 12px;
   }
 }
